@@ -1,0 +1,93 @@
+name: Bug report
+description: Something in EDSQT does not do what it says it does.
+title: "[bug] "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This form is not for security reports.** Report a vulnerability
+        privately: the **Security** tab above, then **Report a vulnerability**.
+
+        **Do not paste `settings.json`.** It holds your pairing with your
+        squadron. If the problem is a setting, say which one and what it is
+        set to.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version, from the status bar
+      description: >-
+        Shown at the right of the status bar along the bottom of the window.
+        If EDSQT will not start, the version is in Add/Remove Programs.
+      placeholder: "0.1.xx"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: >-
+        What you did, what you expected, and what happened instead.
+      placeholder: |
+        Started a Ready Check from the Command page. Two members answered
+        Ready in their app, but the Command page still showed them as waiting.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: page
+    attributes:
+      label: Where in EDSQT
+      options:
+        - Command
+        - Members
+        - Operations or op nets
+        - Tasks or orders
+        - Carriers and builds
+        - Set-up
+        - My flight, My missions, Earnings, Log book or My card
+        - Settings
+        - Pings, alerts or spoken lines
+        - The in-game overlay
+        - The stream page for OBS
+        - Discord (voice nets, posts, the bot)
+        - Installer or updates
+        - Something else
+    validations:
+      required: true
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role in the squadron
+      options:
+        - Leader
+        - Officer
+        - Member
+        - Not paired (solo)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: game-state
+    attributes:
+      label: Was Elite Dangerous running
+      options:
+        - Running
+        - Not running
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: edsqt.log
+      description: >-
+        From %APPDATA%\EDSQT. Paste the lines from around the time it went
+        wrong. Check them first and remove anything you would rather not share.
+      render: text
+    validations:
+      required: false

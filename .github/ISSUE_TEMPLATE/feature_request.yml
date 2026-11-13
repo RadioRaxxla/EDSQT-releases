@@ -1,0 +1,67 @@
+name: Feature request
+description: Something EDSQT should do and does not.
+title: "[request] "
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search the open and closed issues and the release notes first;
+        the request may already exist or be built.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you are trying to do
+      description: >-
+        Describe the situation rather than the feature, for example "as an
+        officer I cannot see who signed up for tonight's op without opening
+        each member".
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you think would fix it
+      description: Optional.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part
+      options:
+        - Running the squadron (Command, Members, ops, tasks)
+        - Voice nets and Discord
+        - Pings, alerts and spoken lines
+        - Carriers, builds and colonisation
+        - My own pages (flight, missions, earnings, log book, card)
+        - The in-game overlay
+        - Streaming
+        - Installer, updates, settings
+        - Something else
+    validations:
+      required: true
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role in the squadron
+      options:
+        - Leader
+        - Officer
+        - Member
+        - Not in a squadron
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version, from the status bar
+      placeholder: "0.1.xx"
+    validations:
+      required: true

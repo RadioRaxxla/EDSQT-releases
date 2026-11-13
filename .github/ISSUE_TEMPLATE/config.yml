@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Download, and what changed in each build
+    url: https://www.radioraxxla.com/
+    about: >-
+      The installer and the release notes. Check the version there before
+      reporting; it may already be fixed.
+  - name: Help and questions
+    url: https://www.radioraxxla.com/
+    about: >-
+      Ask in the Radio Raxxla Discord, linked from the website.
